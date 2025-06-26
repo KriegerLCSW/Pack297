@@ -135,30 +135,14 @@ George Krieger | 📞 (847) 989-5056 | ✉️ kriegerlcsw@gmail.com</p>
 <p>Total visits: <span id="visit-count">Loading...</span></p>
 
 <script>
-  const WEBSITE_ID = '7109ea58-5e15-4f2f-bf12-1f0a7d8c42c8';
-  const API_KEY = 'api_XzJYqg9XEak1o7PJuMnnP1WcwuytqRaQ';  // <-- Replace with your real key!
-
-  fetch(`https://cloud.umami.is/api/websites/${WEBSITE_ID}/metrics?page=1&type=pageview`, {
-    headers: {
-      'Authorization': `Bearer ${API_KEY}`
-    }
-  })
-  .then(res => res.json())
-  .then(data => {
-    const total = data?.pageviews?.value || 0;
-    document.getElementById('visit-count').textContent = total;
-  })
-  .catch(() => {
-    document.getElementById('visit-count').textContent = 'Unavailable';
-  });
+  fetch('https://api.countapi.xyz/hit/pack297/visits')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('visit-count').textContent = data.value;
+    })
+    .catch(() => {
+      document.getElementById('visit-count').textContent = 'Unavailable';
+    });
 </script>
-fetch('https://cloud.umami.is/api/websites/7109ea58-5e15-4f2f-bf12-1f0a7d8c42c8/metrics?page=1&type=pageview', {
-  headers: {
-    'Authorization': 'Bearer api_XzJYqg9XEak1o7PJuMnnP1WcwuytqRaQ'
-  }
-})
-.then(res => res.json())
-.then(console.log)
-.catch(console.error);
 
 
