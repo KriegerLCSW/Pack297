@@ -135,7 +135,7 @@ George Krieger | 📞 (847) 989-5056 | ✉️ kriegerlcsw@gmail.com</p>
 <p>Total visits: <span id="visit-count">Loading...</span></p>
 
 <script>
-  fetch('https://api.countapi.xyz/hit/pack297/visits')
+  fetch('https://countapi.xyz/hit/pack297/visits')
     .then(response => response.json())
     .then(data => {
       document.getElementById('visit-count').textContent = data.value;
