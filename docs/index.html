@@ -177,7 +177,8 @@ ABC
 </div>
 
 <script>
-  fetch('https://kriegerlcsw.github.io/Pack297/count.txt')
+  fetch('https://kriegerlcsw.github.io/Pack297/count.txt?t=' + Date.now())
+
     .then(res => {
       if (!res.ok) {
         throw new Error(`Network response was not ok: ${res.status}`);
