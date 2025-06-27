@@ -169,80 +169,7 @@ George Krieger | 📞 (847) 989-5056 | ✉️ kriegerlcsw@gmail.com</p>
   </a>
 </div>
 
-<div id="custom-visitor-counter" style="display: flex; gap: 6px;"></div>
-
-<div id="custom-visitor-counter" style="display: flex; gap: 6px; align-items: center;"></div>
-
-<script>
-  fetch('https://countapi.xyz/hit/pack297/visits')
-    .then(res => res.json())
-    .then(data => {
-      const count = data.value || 0;
-      const digits = String(count).split('');
-      const container = document.getElementById('custom-visitor-counter');
-      container.innerHTML = '';
-
-      digits.forEach(d => {
-        const img = document.createElement('img');
-        img.src = `images/${d}.jpg`;
-        img.alt = d;
-        img.style.height = '50px'; // Adjust size to match your patch images
-        img.style.display = 'inline-block';
-        container.appendChild(img)
-      });
-    })
-    .catch(() => {
-      document.getElementById('custom-visitor-counter').textContent = 'NULL';
-    });
-</script>
-
-<div>
-  <p>Total visits (on this browser):</p>
-  <div id="custom-visitor-counter" style="display: flex; gap: 6px; align-items: center;"></div>
-</div>
-
-<script>
-  // Get or initialize local counter
-  let visits = localStorage.getItem('patch-visit-count');
-  visits = visits ? parseInt(visits) + 1 : 1;
-  localStorage.setItem('patch-visit-count', visits);
-
-  // Display patch digits
-  const digits = String(visits).split('');
-  const container = document.getElementById('custom-visitor-counter');
-  container.innerHTML = '';
-
-  digits.forEach(d => {
-    const img = document.createElement('img');
-    img.src = `images/${d}.jpg`;
-    img.alt = d;
-    img.style.height = '50px';
-    img.onerror = () => {
-      img.alt = `[missing ${d}.jpg]`;
-    };
-    container.appendChild(img);
-  });
-</script>
-
-<div id="custom-visitor-counter" style="display: flex; gap: 6px;"></div>
-
-<script>
-  fetch('https://kriegerlcsw.github.io/Pack297/count.txt')
-    .then(res => res.text())
-    .then(value => {
-      const count = parseInt(value.trim());
-      const container = document.getElementById('custom-visitor-counter');
-      container.innerHTML = '';
-
-      String(count).split('').forEach(d => {
-        const img = document.createElement('img');
-        img.src = `images/${d}.jpg`;
-        img.alt = d;
-        img.style.height = '50px';
-        container.appendChild(img);
-      });
-    });
-</script>
+ABC
 
 <div>
   <p>Total visits:</p>
@@ -278,5 +205,4 @@ George Krieger | 📞 (847) 989-5056 | ✉️ kriegerlcsw@gmail.com</p>
       container.textContent = 'Unavailable';
     });
 </script>
-
 
