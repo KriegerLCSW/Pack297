@@ -224,4 +224,24 @@ George Krieger | 📞 (847) 989-5056 | ✉️ kriegerlcsw@gmail.com</p>
   });
 </script>
 
+<div id="custom-visitor-counter" style="display: flex; gap: 6px;"></div>
+
+<script>
+  fetch('https://kriegerlcsw.github.io/Pack297/count.txt')
+    .then(res => res.text())
+    .then(value => {
+      const count = parseInt(value.trim());
+      const container = document.getElementById('custom-visitor-counter');
+      container.innerHTML = '';
+
+      String(count).split('').forEach(d => {
+        const img = document.createElement('img');
+        img.src = `images/${d}.jpg`;
+        img.alt = d;
+        img.style.height = '50px';
+        container.appendChild(img);
+      });
+    });
+</script>
+
 
