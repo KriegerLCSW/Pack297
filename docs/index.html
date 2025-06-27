@@ -196,3 +196,32 @@ George Krieger | 📞 (847) 989-5056 | ✉️ kriegerlcsw@gmail.com</p>
     });
 </script>
 
+<div>
+  <p>Total visits (on this browser):</p>
+  <div id="custom-visitor-counter" style="display: flex; gap: 6px; align-items: center;"></div>
+</div>
+
+<script>
+  // Get or initialize local counter
+  let visits = localStorage.getItem('patch-visit-count');
+  visits = visits ? parseInt(visits) + 1 : 1;
+  localStorage.setItem('patch-visit-count', visits);
+
+  // Display patch digits
+  const digits = String(visits).split('');
+  const container = document.getElementById('custom-visitor-counter');
+  container.innerHTML = '';
+
+  digits.forEach(d => {
+    const img = document.createElement('img');
+    img.src = `images/${d}.jpg`;
+    img.alt = d;
+    img.style.height = '50px';
+    img.onerror = () => {
+      img.alt = `[missing ${d}.jpg]`;
+    };
+    container.appendChild(img);
+  });
+</script>
+
+
