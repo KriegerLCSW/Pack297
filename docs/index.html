@@ -85,9 +85,45 @@ a {
   color: var(--blue);
 }
 
+/* Equal-width Den / Grade table */
+
+.den-grade-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 20px 0 28px;
+}
+
+.den-grade-table td {
+  width: 25%;
+  border: 1px solid #aaa;
+  padding: 14px 12px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.05em;
+}
+
+.den-grade-table td a {
+  display: inline-block;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.den-grade-table td a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .den-grid {
     grid-template-columns: 1fr;
+  }
+
+  .den-grade-table {
+    font-size: 0.9em;
+  }
+
+  .den-grade-table td {
+    padding: 10px 6px;
   }
 }
 </style>
@@ -226,117 +262,83 @@ Each scout is assigned to a <strong>DEN</strong> based on their grade level:
 </p>
 
 
-<table border="1">
-<tbody>
+<table class="den-grade-table">
+  <colgroup>
+    <col style="width:25%">
+    <col style="width:25%">
+    <col style="width:25%">
+    <col style="width:25%">
+  </colgroup>
 
-<tr>
-<td>
-<h1><strong>Kindergarteners</strong></h1>
-</td>
+  <tbody>
 
-<td>
-<h1>
-<span style="background-color: #ffff00;">
-<strong>
-<a href="https://kriegerlcsw.github.io/Pack297/lion.html">
-LION DEN
-</a>
-</strong>
-</span>
-</h1>
-</td>
+    <tr>
+      <td>
+        <strong>Kindergarteners</strong>
+      </td>
 
-<td>
-<h1><strong>Third Graders</strong></h1>
-</td>
+      <td>
+        <a href="https://kriegerlcsw.github.io/Pack297/lion.html">
+          <strong>LION DEN</strong>
+        </a>
+      </td>
 
-<td>
-<h1>
-<span style="background-color: #00ffff;">
-<strong>
-<a href="https://kriegerlcsw.github.io/Pack297/bear.html">
-BEAR DEN
-</a>
-</strong>
-</span>
-</h1>
-</td>
-</tr>
+      <td>
+        <strong>Third Graders</strong>
+      </td>
 
+      <td>
+        <a href="https://kriegerlcsw.github.io/Pack297/bear.html">
+          <strong>BEAR DEN</strong>
+        </a>
+      </td>
+    </tr>
 
-<tr>
-<td>
-<h1><strong>First Graders</strong></h1>
-</td>
+    <tr>
+      <td>
+        <strong>First Graders</strong>
+      </td>
 
-<td>
-<h1>
-<span style="background-color: #ff6600;">
-<strong>
-<a href="https://kriegerlcsw.github.io/Pack297/tiger.html">
-TIGER DEN
-</a>
-</strong>
-</span>
-</h1>
-</td>
+      <td>
+        <a href="https://kriegerlcsw.github.io/Pack297/tiger.html">
+          <strong>TIGER DEN</strong>
+        </a>
+      </td>
 
-<td>
-<h1><strong>Fourth Graders</strong></h1>
-</td>
+      <td>
+        <strong>Fourth Graders</strong>
+      </td>
 
-<td>
-<h1>
-<span style="background-color: #008000; color: #ffffff;">
-<strong>
-<a style="color: #ffffff;"
-href="https://kriegerlcsw.github.io/Pack297/webelos.html">
-WEBELOS DEN
-</a>
-</strong>
-</span>
-</h1>
-</td>
-</tr>
+      <td>
+        <a href="https://kriegerlcsw.github.io/Pack297/webelos.html">
+          <strong>WEBELOS DEN</strong>
+        </a>
+      </td>
+    </tr>
 
+    <tr>
+      <td>
+        <strong>Second Graders</strong>
+      </td>
 
-<tr>
-<td>
-<h1><strong>Second Graders</strong></h1>
-</td>
+      <td>
+        <a href="https://kriegerlcsw.github.io/Pack297/wolf.html">
+          <strong>WOLF DEN</strong>
+        </a>
+      </td>
 
-<td>
-<h1>
-<span style="background-color: #FF0000; color: #ffffff;">
-<strong>
-<a style="color: #ffffff;"
-href="https://kriegerlcsw.github.io/Pack297/wolf.html">
-WOLF DEN
-</a>
-</strong>
-</span>
-</h1>
-</td>
+      <td>
+        <strong>Fifth Graders</strong>
+      </td>
 
-<td>
-<h1><strong>Fifth Graders</strong></h1>
-</td>
+      <td>
+        <a href="https://kriegerlcsw.github.io/Pack297/aol.html">
+          <strong>ARROW OF LIGHT (AOL) DEN</strong>
+        </a>
+      </td>
+    </tr>
 
-<td>
-<h1>
-<span style="background-color: #993300; color: #ffffff;">
-<strong>
-<a style="color: #ffffff;"
-href="https://kriegerlcsw.github.io/Pack297/aol.html">
-ARROW OF LIGHT (AOL) DEN
-</a>
-</strong>
-</span>
-</h1>
-</td>
-</tr>
-
-</tbody>
+  </tbody>
 </table>
 
 
@@ -360,53 +362,53 @@ to go to their web page!
 
 <div class="den-grid">
 
-<div class="den-card">
-<a href="https://kriegerlcsw.github.io/Pack297/lion.html">
-<img src="https://kriegerlcsw.github.io/Pack297/lion%20logo.png"
-alt="Lion Logo">
-<strong>🦁 LION DEN</strong>
-</a>
-</div>
+  <div class="den-card">
+    <a href="https://kriegerlcsw.github.io/Pack297/lion.html">
+      <img src="https://kriegerlcsw.github.io/Pack297/lion%20logo.png"
+           alt="Lion Logo">
+      <strong>🦁 LION DEN</strong>
+    </a>
+  </div>
 
-<div class="den-card">
-<a href="https://kriegerlcsw.github.io/Pack297/tiger.html">
-<img src="https://kriegerlcsw.github.io/Pack297/tiger%20logo.webp"
-alt="Tiger Logo">
-<strong>🐯 TIGER DEN</strong>
-</a>
-</div>
+  <div class="den-card">
+    <a href="https://kriegerlcsw.github.io/Pack297/tiger.html">
+      <img src="https://kriegerlcsw.github.io/Pack297/tiger%20logo.webp"
+           alt="Tiger Logo">
+      <strong>🐯 TIGER DEN</strong>
+    </a>
+  </div>
 
-<div class="den-card">
-<a href="https://kriegerlcsw.github.io/Pack297/wolf.html">
-<img src="https://kriegerlcsw.github.io/Pack297/wolf%20logo.webp"
-alt="Wolf Logo">
-<strong>🐺 WOLF DEN</strong>
-</a>
-</div>
+  <div class="den-card">
+    <a href="https://kriegerlcsw.github.io/Pack297/wolf.html">
+      <img src="https://kriegerlcsw.github.io/Pack297/wolf%20logo.webp"
+           alt="Wolf Logo">
+      <strong>🐺 WOLF DEN</strong>
+    </a>
+  </div>
 
-<div class="den-card">
-<a href="https://kriegerlcsw.github.io/Pack297/bear.html">
-<img src="https://kriegerlcsw.github.io/Pack297/bear%20logo.webp"
-alt="Bear Logo">
-<strong>🐻 BEAR DEN</strong>
-</a>
-</div>
+  <div class="den-card">
+    <a href="https://kriegerlcsw.github.io/Pack297/bear.html">
+      <img src="https://kriegerlcsw.github.io/Pack297/bear%20logo.webp"
+           alt="Bear Logo">
+      <strong>🐻 BEAR DEN</strong>
+    </a>
+  </div>
 
-<div class="den-card">
-<a href="https://kriegerlcsw.github.io/Pack297/webelos.html">
-<img src="https://kriegerlcsw.github.io/Pack297/webelos%20logo.png"
-alt="Webelos Logo">
-<strong>🟢 WEBELOS DEN</strong>
-</a>
-</div>
+  <div class="den-card">
+    <a href="https://kriegerlcsw.github.io/Pack297/webelos.html">
+      <img src="https://kriegerlcsw.github.io/Pack297/webelos%20logo.png"
+           alt="Webelos Logo">
+      <strong>🟢 WEBELOS DEN</strong>
+    </a>
+  </div>
 
-<div class="den-card">
-<a href="https://kriegerlcsw.github.io/Pack297/aol.html">
-<img src="https://kriegerlcsw.github.io/Pack297/aol%20logo.png"
-alt="AOL Logo">
-<strong>⭐ ARROW OF LIGHT (AOL) DEN</strong>
-</a>
-</div>
+  <div class="den-card">
+    <a href="https://kriegerlcsw.github.io/Pack297/aol.html">
+      <img src="https://kriegerlcsw.github.io/Pack297/aol%20logo.png"
+           alt="AOL Logo">
+      <strong>⭐ ARROW OF LIGHT (AOL) DEN</strong>
+    </a>
+  </div>
 
 </div>
 
@@ -514,12 +516,12 @@ to email Pack 297.
 <br><br>
 
 <figure>
-<a href="https://my.scouting.org/online-registration/60d27983-617d-4ae7-886f-9c1ac6071cfa/applicant-type">
-<img src="https://kriegerlcsw.github.io/Pack297/images/297.png"
-alt="297 Logo"
-width="15%">
-<h1>Join Pack 297 Now!</h1>
-</a>
+  <a href="https://my.scouting.org/online-registration/60d27983-617d-4ae7-886f-9c1ac6071cfa/applicant-type">
+    <img src="https://kriegerlcsw.github.io/Pack297/images/297.png"
+         alt="297 Logo"
+         width="15%">
+    <h1>Join Pack 297 Now!</h1>
+  </a>
 </figure>
 
 
