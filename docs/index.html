@@ -123,6 +123,25 @@ a {
   color: #ffffff;
 }
 
+/* Align den names beneath the table */
+
+.den-logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.den-logo-slot {
+  display: inline-flex;
+  width: 180px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.den-logo-slot img {
+  display: block;
+}
+
 @media (max-width: 600px) {
   .den-grade-table {
     font-size: 0.9em;
@@ -130,6 +149,10 @@ a {
 
   .den-grade-table td {
     padding: 8px 5px;
+  }
+
+  .den-logo-slot {
+    width: 140px;
   }
 }
 </style>
@@ -374,55 +397,67 @@ to go to their web page!
 </p>
 
 <figure>
-<a href="https://kriegerlcsw.github.io/Pack297/lion.html">
+<a class="den-logo-link" href="https://kriegerlcsw.github.io/Pack297/lion.html">
+<span class="den-logo-slot">
 <img src="https://kriegerlcsw.github.io/Pack297/lion%20logo.png"
 alt="Lion Logo"
 width="17%">
+</span>
 <strong>LION DEN</strong>
 </a>
 </figure>
 
 <figure>
-<a href="https://kriegerlcsw.github.io/Pack297/tiger.html">
+<a class="den-logo-link" href="https://kriegerlcsw.github.io/Pack297/tiger.html">
+<span class="den-logo-slot">
 <img src="https://kriegerlcsw.github.io/Pack297/tiger%20logo.webp"
 alt="Tiger Logo"
 width="15%">
+</span>
 <strong>TIGER DEN</strong>
 </a>
 </figure>
 
 <figure>
-<a href="https://kriegerlcsw.github.io/Pack297/wolf.html">
+<a class="den-logo-link" href="https://kriegerlcsw.github.io/Pack297/wolf.html">
+<span class="den-logo-slot">
 <img src="https://kriegerlcsw.github.io/Pack297/wolf%20logo.webp"
 alt="Wolf Logo"
 width="15%">
+</span>
 <strong>WOLF DEN</strong>
 </a>
 </figure>
 
 <figure>
-<a href="https://kriegerlcsw.github.io/Pack297/bear.html">
+<a class="den-logo-link" href="https://kriegerlcsw.github.io/Pack297/bear.html">
+<span class="den-logo-slot">
 <img src="https://kriegerlcsw.github.io/Pack297/bear%20logo.webp"
 alt="Bear Logo"
 width="15%">
+</span>
 <strong>BEAR DEN</strong>
 </a>
 </figure>
 
 <figure>
-<a href="https://kriegerlcsw.github.io/Pack297/webelos.html">
+<a class="den-logo-link" href="https://kriegerlcsw.github.io/Pack297/webelos.html">
+<span class="den-logo-slot">
 <img src="https://kriegerlcsw.github.io/Pack297/webelos%20logo.png"
 alt="Webelos Logo"
 width="13%">
+</span>
 <strong>WEBELOS DEN</strong>
 </a>
 </figure>
 
 <figure>
-<a href="https://kriegerlcsw.github.io/Pack297/aol.html">
+<a class="den-logo-link" href="https://kriegerlcsw.github.io/Pack297/aol.html">
+<span class="den-logo-slot">
 <img src="https://kriegerlcsw.github.io/Pack297/aol%20logo.png"
 alt="AOL Logo"
 width="15%">
+</span>
 <strong>ARROW OF LIGHT (AOL) DEN</strong>
 </a>
 </figure>
