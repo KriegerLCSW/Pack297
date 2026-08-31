@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,79 +7,403 @@
 <title>Pack 297 - Meetings 2026-2027</title>
 <style>
 :root { --blue: #003F87; --yellow: #FCD116; }
-body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 24px; line-height: 1.5; color: #222; }
-h1 { color: var(--blue); border-bottom: 6px solid var(--yellow); padding-bottom: 8px; }
-h2 { color: var(--blue); margin-top: 30px; }
-table { border-collapse: collapse; width: 100%; margin: 16px 0 28px; table-layout: fixed; }
-th, td { border: 1px solid #aaa; padding: 9px 10px; text-align: left; vertical-align: top; }
-th { background: var(--blue); color: white; }
-tr:nth-child(even) td { background: #f7f7f7; }
-.note { background: #fff9d9; padding: 12px 16px; border-left: 6px solid var(--yellow); }
-.tbd { font-style: italic; color: #666; }
-.page-image { display:block; width:100%; max-width:760px; height:auto; margin:18px auto 26px; border-radius:8px; }
-.logo-image { display:block; max-width:180px; height:auto; margin:0 auto 10px; }
-footer { margin-top: 32px; padding-top: 16px; border-top: 6px solid var(--yellow); }
-a { color: var(--blue); }
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  line-height: 1.5;
+  color: #222;
+  background: #fff;
+}
+
+h1 {
+  color: var(--blue);
+  border-bottom: 6px solid var(--yellow);
+  padding-bottom: 8px;
+}
+
+h2 {
+  color: var(--blue);
+  margin-top: 30px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 16px 0 28px;
+  table-layout: fixed;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--blue);
+  color: white;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background: #f7f7f7;
+}
+
+.note {
+  background: #fff9d9;
+  padding: 12px 16px;
+  border-left: 6px solid var(--yellow);
+  border-radius: 4px;
+}
+
+.tbd {
+  font-style: italic;
+  color: #666;
+}
+
+.page-image {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  margin: 18px auto 26px;
+  border-radius: 8px;
+}
+
+.logo-image {
+  display: block;
+  max-width: 180px;
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+/* Den Meeting Cards */
+
+.den-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 20px 0 32px;
+}
+
+.den-card {
+  display: block;
+  background: #fff;
+  border: 2px solid #d0d0d0;
+  border-radius: 12px;
+  padding: 18px 12px 14px;
+  text-align: center;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.den-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--blue);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.14);
+}
+
+.den-card img {
+  display: block;
+  width: auto;
+  height: 105px;
+  max-width: 85%;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+
+.den-card strong {
+  display: block;
+  color: var(--blue);
+  font-size: 1.05em;
+  letter-spacing: 0.3px;
+}
+
+.den-card .meeting-time {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 6px solid var(--yellow);
+}
+
+a {
+  color: var(--blue);
+}
+
+@media (max-width: 650px) {
+  .den-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .den-card img {
+    height: 90px;
+  }
+}
+
+@media (max-width: 430px) {
+  .den-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <img class="logo-image" src="images/297.png" alt="Pack 297 logo">
+
 <h1>Pack 297 Meetings — 2026-2027 School Year</h1>
+
 <img class="page-image" src="images/Meetings.png" alt="Pack 297 meetings">
 
-<div class="note"><strong>Meeting Location:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=St.+Hubert+Catholic+Church%2C+729+Grand+Canyon+St%2C+Hoffman+Estates%2C+IL+60169" target="_blank" rel="noopener">St. Hubert Catholic Church</a>, 729 Grand Canyon Street, Hoffman Estates, IL 60169, unless otherwise noted.</div>
+<div class="note">
+<strong>Meeting Location:</strong>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=St.+Hubert+Catholic+Church%2C+729+Grand+Canyon+St%2C+Hoffman+Estates%2C+IL+60169" target="_blank" rel="noopener">St. Hubert Catholic Church</a>,
+729 Grand Canyon Street, Hoffman Estates, IL 60169, unless otherwise noted.
+</div>
 
 <h2>Pack Meetings</h2>
-<p>Pack meetings are scheduled for the <strong>3rd Friday of each month</strong>. Each meeting has a planned activity; activities may be changed or cancelled when a separate Pack event makes that appropriate.</p>
+
+<p>
+Pack meetings are scheduled for the <strong>3rd Friday of each month</strong>.
+Each meeting has a planned activity; activities may be changed or cancelled when a separate Pack event makes that appropriate.
+</p>
+
 <table>
-<colgroup><col style="width:24%"><col style="width:76%"></colgroup>
-<tr><th>Date</th><th>Planned Activity</th></tr>
-<tr><td>August 29, 2026</td><td>Crossover Celebration — first Pack meeting of the new program year (completed)</td></tr>
-<tr><td>September 18, 2026</td><td>Cub-O-Ree Preparation &amp; Pack Challenge Night</td></tr>
-<tr><td>October 16, 2026</td><td>Halloween Carnival / Cub Scout Games</td></tr>
-<tr><td>November 20, 2026</td><td>Service &amp; Gratitude Night</td></tr>
-<tr><td>December 18, 2026</td><td><strong>Pack Holiday Potluck Dinner &amp; Celebration</strong></td></tr>
-<tr><td>January 15, 2027</td><td>Pinewood Derby Workshop</td></tr>
-<tr><td>February 19, 2027</td><td>Scouting Celebration &amp; Blue and Gold Preparation</td></tr>
-<tr><td>March 19, 2027</td><td>STEM / Engineering Challenge Night</td></tr>
-<tr><td>April 16, 2027</td><td>Outdoor Skills / Cub Scout Field Day</td></tr>
-<tr><td>May 21, 2027</td><td>Crossover Preparation &amp; Pack Adventure</td></tr>
-<tr><td>June 18, 2027</td><td>Summer Kickoff / Outdoor Games</td></tr>
-<tr><td>July 16, 2027</td><td>Water &amp; Summer Fun Night</td></tr>
-<tr><td>August 20, 2027</td><td>New Program Year / Recruitment &amp; Advancement Celebration</td></tr>
+<colgroup>
+<col style="width:24%">
+<col style="width:76%">
+</colgroup>
+
+<tr>
+<th>Date</th>
+<th>Planned Activity</th>
+</tr>
+
+<tr>
+<td>August 29, 2026</td>
+<td>Crossover Celebration — first Pack meeting of the new program year (completed)</td>
+</tr>
+
+<tr>
+<td>September 18, 2026</td>
+<td>Cub-O-Ree Preparation &amp; Pack Challenge Night</td>
+</tr>
+
+<tr>
+<td>October 16, 2026</td>
+<td>Halloween Carnival / Cub Scout Games</td>
+</tr>
+
+<tr>
+<td>November 20, 2026</td>
+<td>Service &amp; Gratitude Night</td>
+</tr>
+
+<tr>
+<td>December 18, 2026</td>
+<td><strong>Pack Holiday Potluck Dinner &amp; Celebration</strong></td>
+</tr>
+
+<tr>
+<td>January 15, 2027</td>
+<td>Pinewood Derby Workshop</td>
+</tr>
+
+<tr>
+<td>February 19, 2027</td>
+<td>Scouting Celebration &amp; Blue and Gold Preparation</td>
+</tr>
+
+<tr>
+<td>March 19, 2027</td>
+<td>STEM / Engineering Challenge Night</td>
+</tr>
+
+<tr>
+<td>April 16, 2027</td>
+<td>Outdoor Skills / Cub Scout Field Day</td>
+</tr>
+
+<tr>
+<td>May 21, 2027</td>
+<td>Crossover Preparation &amp; Pack Adventure</td>
+</tr>
+
+<tr>
+<td>June 18, 2027</td>
+<td>Summer Kickoff / Outdoor Games</td>
+</tr>
+
+<tr>
+<td>July 16, 2027</td>
+<td>Water &amp; Summer Fun Night</td>
+</tr>
+
+<tr>
+<td>August 20, 2027</td>
+<td>New Program Year / Recruitment &amp; Advancement Celebration</td>
+</tr>
+
 </table>
 
 <h2>Den Meetings</h2>
-<p>Den meetings begin the week of <strong>September 7, 2026</strong>.</p>
-<table>
-<colgroup><col style="width:52%"><col style="width:48%"></colgroup>
-<tr><th>Den</th><th>Meeting Schedule</th></tr>
-<tr><td>Lions</td><td>Tuesdays at 5:30 PM</td></tr>
-<tr><td>Tigers</td><td>Tuesdays at 5:30 PM</td></tr>
-<tr><td>Wolves</td><td>Tuesdays at 5:30 PM</td></tr>
-<tr><td>Bears</td><td>Tuesdays at 5:30 PM</td></tr>
-<tr><td>Webelos</td><td>Tuesdays at 5:30 PM</td></tr>
-<tr><td>AOL</td><td><span class="tbd">Begins the week of September 7; day and time TBA.</span></td></tr>
-</table>
+
+<p>
+Den meetings begin the week of <strong>September 7, 2026</strong>.
+Click a den below to visit its den page.
+</p>
+
+<div class="den-grid">
+
+<a class="den-card" href="lion.html">
+<img src="images/lion%20logo.png" alt="Lion Logo">
+<strong>LION DEN</strong>
+<span class="meeting-time">Tuesdays at 5:30 PM</span>
+</a>
+
+<a class="den-card" href="tiger.html">
+<img src="images/tiger%20logo.webp" alt="Tiger Logo">
+<strong>TIGER DEN</strong>
+<span class="meeting-time">Tuesdays at 5:30 PM</span>
+</a>
+
+<a class="den-card" href="wolf.html">
+<img src="images/wolf%20logo.webp" alt="Wolf Logo">
+<strong>WOLF DEN</strong>
+<span class="meeting-time">Tuesdays at 5:30 PM</span>
+</a>
+
+<a class="den-card" href="bear.html">
+<img src="images/bear%20logo.webp" alt="Bear Logo">
+<strong>BEAR DEN</strong>
+<span class="meeting-time">Tuesdays at 5:30 PM</span>
+</a>
+
+<a class="den-card" href="webelos.html">
+<img src="images/webelos%20logo.png" alt="Webelos Logo">
+<strong>WEBELOS DEN</strong>
+<span class="meeting-time">Tuesdays at 5:30 PM</span>
+</a>
+
+<a class="den-card" href="aol.html">
+<img src="images/aol%20logo.png" alt="Arrow of Light Logo">
+<strong>ARROW OF LIGHT (AOL) DEN</strong>
+<span class="meeting-time tbd">Day and time TBA</span>
+</a>
+
+</div>
 
 <h2>Adult Meetings</h2>
-<p>Adult meetings are scheduled for the <strong>2nd and 4th Sundays of each month, 3:00–5:00 PM</strong>.</p>
+
+<p>
+Adult meetings are scheduled for the <strong>2nd and 4th Sundays of each month, 3:00–5:00 PM</strong>.
+</p>
+
 <table>
-<tr><th>Month</th><th>2nd Sunday</th><th>4th Sunday</th></tr>
-<tr><td>September 2026</td><td>September 13</td><td>September 27</td></tr>
-<tr><td>October 2026</td><td>October 11</td><td>October 25</td></tr>
-<tr><td>November 2026</td><td>November 8</td><td>November 22</td></tr>
-<tr><td>December 2026</td><td>December 13</td><td><strong>December 27 — No meeting (Winter Break)</strong></td></tr>
-<tr><td>January 2027</td><td>January 10</td><td>January 24</td></tr>
-<tr><td>February 2027</td><td>February 14</td><td>February 28</td></tr>
-<tr><td>March 2027</td><td>March 14</td><td>March 28</td></tr>
-<tr><td>April 2027</td><td>April 11</td><td>April 25</td></tr>
-<tr><td>May 2027</td><td>May 9</td><td>May 23</td></tr>
+
+<tr>
+<th>Month</th>
+<th>2nd Sunday</th>
+<th>4th Sunday</th>
+</tr>
+
+<tr>
+<td>September 2026</td>
+<td>September 13</td>
+<td>September 27</td>
+</tr>
+
+<tr>
+<td>October 2026</td>
+<td>October 11</td>
+<td>October 25</td>
+</tr>
+
+<tr>
+<td>November 2026</td>
+<td>November 8</td>
+<td>November 22</td>
+</tr>
+
+<tr>
+<td>December 2026</td>
+<td>December 13</td>
+<td><strong>December 27 — No meeting (Winter Break)</strong></td>
+</tr>
+
+<tr>
+<td>January 2027</td>
+<td>January 10</td>
+<td>January 24</td>
+</tr>
+
+<tr>
+<td>February 2027</td>
+<td>February 14</td>
+<td>February 28</td>
+</tr>
+
+<tr>
+<td>March 2027</td>
+<td>March 14</td>
+<td>March 28</td>
+</tr>
+
+<tr>
+<td>April 2027</td>
+<td>April 11</td>
+<td>April 25</td>
+</tr>
+
+<tr>
+<td>May 2027</td>
+<td>May 9</td>
+<td>May 23</td>
+</tr>
+
 </table>
 
 <footer>
-<p><strong>Pack 297</strong><br>George Krieger | 📞 (847) 989-5056 | ✉️ pack297hoffmanestates@gmail.com</p>
-<p><a href="index.html">Back to the main Pack 297 webpage</a> | <a href="Events.html">Pack Events</a></p>
+
+<p>
+<strong>Pack 297</strong><br>
+George Krieger | 📞 (847) 989-5056 | ✉️ pack297hoffmanestates@gmail.com
+</p>
+
+<p>
+<a href="index.html">Back to the main Pack 297 webpage</a> |
+<a href="Events.html">Pack Events</a>
+</p>
+
 </footer>
+
 </body>
 </html>
+```
