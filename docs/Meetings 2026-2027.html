@@ -1,11 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pack 297 - Meetings 2026-2027</title>
+
 <style>
-:root { --blue: #003F87; --yellow: #FCD116; }
+:root {
+  --blue: #003F87;
+  --yellow: #FCD116;
+  --light-blue: #eef4fb;
+  --border: #c9d3df;
+  --text: #222;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -13,7 +21,7 @@ body {
   margin: 0 auto;
   padding: 24px;
   line-height: 1.5;
-  color: #222;
+  color: var(--text);
   background: #fff;
 }
 
@@ -25,7 +33,7 @@ h1 {
 
 h2 {
   color: var(--blue);
-  margin-top: 30px;
+  margin-top: 34px;
 }
 
 table {
@@ -34,22 +42,25 @@ table {
   width: 100%;
   margin: 16px 0 28px;
   table-layout: fixed;
-  border: 1px solid #aaa;
+  border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
 }
 
-th, td {
-  border-right: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  padding: 10px 12px;
+th,
+td {
+  padding: 11px 12px;
   text-align: left;
   vertical-align: top;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 th {
   background: var(--blue);
   color: white;
+  font-weight: bold;
 }
 
 th:last-child,
@@ -62,14 +73,15 @@ tr:last-child td {
 }
 
 tr:nth-child(even) td {
-  background: #f7f7f7;
+  background: #f7f9fc;
 }
 
 .note {
   background: #fff9d9;
   padding: 12px 16px;
   border-left: 6px solid var(--yellow);
-  border-radius: 4px;
+  border-radius: 5px;
+  margin-bottom: 28px;
 }
 
 .tbd {
@@ -93,6 +105,36 @@ tr:nth-child(even) td {
   margin: 0 auto 10px;
 }
 
+/* Quick Meeting Summary */
+
+.meeting-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 24px 0 32px;
+}
+
+.summary-card {
+  background: var(--light-blue);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--blue);
+  border-radius: 9px;
+  padding: 14px;
+  text-align: center;
+}
+
+.summary-card strong {
+  display: block;
+  color: var(--blue);
+  font-size: 1.05em;
+  margin-bottom: 5px;
+}
+
+.summary-card span {
+  display: block;
+  font-size: 0.92em;
+}
+
 /* Den Meeting Cards */
 
 .den-grid {
@@ -112,7 +154,9 @@ tr:nth-child(even) td {
   text-decoration: none;
   color: #222;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease,
+              box-shadow 0.15s ease,
+              border-color 0.15s ease;
 }
 
 .den-card:hover {
@@ -144,7 +188,43 @@ tr:nth-child(even) td {
   color: #555;
 }
 
+/* Highlight important Pack activities */
+
+.special-event {
+  font-weight: bold;
+  color: var(--blue);
+}
+
+/* Adult Meeting Table */
+
+.adult-table th:nth-child(1) {
+  width: 27%;
+}
+
+.adult-table th:nth-child(2) {
+  width: 30%;
+}
+
+.adult-table th:nth-child(3) {
+  width: 43%;
+}
+
+footer {
+  margin-top: 36px;
+  padding-top: 16px;
+  border-top: 6px solid var(--yellow);
+}
+
+a {
+  color: var(--blue);
+}
+
 @media (max-width: 650px) {
+
+  .meeting-summary {
+    grid-template-columns: 1fr;
+  }
+
   .den-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -156,19 +236,19 @@ tr:nth-child(even) td {
 }
 
 @media (max-width: 430px) {
+
   .den-grid {
     grid-template-columns: 1fr;
   }
-}
 
-footer {
-  margin-top: 32px;
-  padding-top: 16px;
-  border-top: 6px solid var(--yellow);
-}
+  body {
+    padding: 16px;
+  }
 
-a {
-  color: var(--blue);
+  th,
+  td {
+    padding: 9px 8px;
+  }
 }
 </style>
 </head>
@@ -183,8 +263,29 @@ a {
 
 <div class="note">
 <strong>Meeting Location:</strong>
-<a href="https://www.google.com/maps/search/?api=1&amp;query=St.+Hubert+Catholic+Church%2C+729+Grand+Canyon+St%2C+Hoffman+Estates%2C+IL+60169" target="_blank" rel="noopener">St. Hubert Catholic Church</a>,
+<a href="https://www.google.com/maps/search/?api=1&amp;query=St.+Hubert+Catholic+Church%2C+729+Grand+Canyon+St%2C+Hoffman+Estates%2C+IL+60169"
+target="_blank"
+rel="noopener">St. Hubert Catholic Church</a>,
 729 Grand Canyon Street, Hoffman Estates, IL 60169, unless otherwise noted.
+</div>
+
+<div class="meeting-summary">
+
+<div class="summary-card">
+<strong>PACK MEETINGS</strong>
+<span>3rd Friday of each month</span>
+</div>
+
+<div class="summary-card">
+<strong>DEN MEETINGS</strong>
+<span>Tuesdays at 5:30 PM</span>
+</div>
+
+<div class="summary-card">
+<strong>ADULT MEETINGS</strong>
+<span>2nd &amp; 4th Sundays<br>3:00–5:00 PM</span>
+</div>
+
 </div>
 
 <h2>Pack Meetings</h2>
@@ -195,6 +296,7 @@ Each meeting has a planned activity; activities may be changed or cancelled when
 </p>
 
 <table>
+
 <colgroup>
 <col style="width:24%">
 <col style="width:76%">
@@ -227,12 +329,12 @@ Each meeting has a planned activity; activities may be changed or cancelled when
 
 <tr>
 <td>December 18, 2026</td>
-<td><strong>Pack Holiday Potluck Dinner &amp; Celebration</strong></td>
+<td class="special-event">Pack Holiday Potluck Dinner &amp; Celebration</td>
 </tr>
 
 <tr>
 <td>January 15, 2027</td>
-<td>Pinewood Derby Workshop</td>
+<td class="special-event">Pinewood Derby Workshop</td>
 </tr>
 
 <tr>
@@ -242,12 +344,12 @@ Each meeting has a planned activity; activities may be changed or cancelled when
 
 <tr>
 <td>March 19, 2027</td>
-<td>STEM / Engineering Challenge Night</td>
+<td class="special-event">STEM / Engineering Challenge Night</td>
 </tr>
 
 <tr>
 <td>April 16, 2027</td>
-<td>Outdoor Skills / Cub Scout Field Day</td>
+<td class="special-event">Outdoor Skills / Cub Scout Field Day</td>
 </tr>
 
 <tr>
@@ -325,7 +427,7 @@ Click a den below to visit its den page.
 Adult meetings are scheduled for the <strong>2nd and 4th Sundays of each month, 3:00–5:00 PM</strong>.
 </p>
 
-<table>
+<table class="adult-table">
 
 <tr>
 <th>Month</th>
