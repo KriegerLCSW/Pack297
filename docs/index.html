@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -43,48 +44,6 @@ a {
   font-weight: bold;
 }
 
-.schedule-link {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.schedule-link img {
-  display: block;
-  margin: 0 auto 8px;
-  max-width: 180px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.den-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin: 20px 0 28px;
-}
-
-.den-card {
-  border: 1px solid #c9d3df;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
-  background: #f7f9fc;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-}
-
-.den-card img {
-  display: block;
-  width: auto;
-  max-width: 130px;
-  max-height: 130px;
-  margin: 0 auto 10px;
-}
-
-.den-card strong {
-  display: block;
-  color: var(--blue);
-}
-
 /* Equal-width Den / Grade table */
 
 .den-grade-table {
@@ -97,15 +56,12 @@ a {
 .den-grade-table td {
   width: 25%;
   border: 1px solid #aaa;
-  padding: 14px 12px;
+  padding: 9px 10px;
   text-align: center;
   vertical-align: middle;
-  font-size: 1.05em;
 }
 
 .den-grade-table td a {
-  display: inline-block;
-  color: var(--blue);
   text-decoration: none;
 }
 
@@ -113,70 +69,107 @@ a {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-  .den-grid {
-    grid-template-columns: 1fr;
-  }
+/* Den colors */
 
+.den-grade-table tr:nth-child(1) td:nth-child(2) {
+  background-color: #ffff00;
+}
+
+.den-grade-table tr:nth-child(1) td:nth-child(4) {
+  background-color: #00ffff;
+}
+
+.den-grade-table tr:nth-child(2) td:nth-child(2) {
+  background-color: #ff6600;
+}
+
+.den-grade-table tr:nth-child(2) td:nth-child(4) {
+  background-color: #008000;
+}
+
+.den-grade-table tr:nth-child(2) td:nth-child(4) a {
+  color: #ffffff;
+}
+
+.den-grade-table tr:nth-child(3) td:nth-child(2) {
+  background-color: #ff0000;
+}
+
+.den-grade-table tr:nth-child(3) td:nth-child(2) a {
+  color: #ffffff;
+}
+
+.den-grade-table tr:nth-child(3) td:nth-child(4) {
+  background-color: #993300;
+}
+
+.den-grade-table tr:nth-child(3) td:nth-child(4) a {
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
   .den-grade-table {
     font-size: 0.9em;
   }
 
   .den-grade-table td {
-    padding: 10px 6px;
+    padding: 8px 5px;
   }
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="schedule-link">
-  <a href="https://kriegerlcsw.github.io/Pack297/Meetings.html">
-    <img src="https://kriegerlcsw.github.io/Pack297/images/Meetings.png"
-         alt="Pack 297 Meetings">
-    <strong>📅 Click HERE for the Den and Pack meeting schedule!</strong>
-  </a>
-</div>
+<figure>
+<a href="https://kriegerlcsw.github.io/Pack297/Meetings.html">
+<img src="https://kriegerlcsw.github.io/Pack297/images/Meetings.png"
+alt="Meeting Logo"
+width="17%">
+<strong>Click HERE for the Den and Pack meeting schedule!</strong>
+</a>
+</figure>
 
-<div class="schedule-link">
-  <a href="https://kriegerlcsw.github.io/Pack297/Events.html">
-    <img src="https://kriegerlcsw.github.io/Pack297/images/Events.png"
-         alt="Pack 297 Events">
-    <strong>🎉 Click HERE for the Event schedule!</strong>
-  </a>
-</div>
+<figure>
+<a href="https://kriegerlcsw.github.io/Pack297/Events.html">
+<img src="https://kriegerlcsw.github.io/Pack297/images/Events.png"
+alt="Event Logo"
+width="17%">
+<strong>Click HERE for the Event schedule!</strong>
+</a>
+</figure>
 
 <center>
 
 <img src="https://kriegerlcsw.github.io/Pack297/images/SMI.png"
-     alt="Scout Me In!"
-     width="50%">
+alt="Scout Me In!"
+width="50%">
 
 <h1 style="text-align: center;">
-  <span style="text-decoration: underline; color: #0000ff;">
-    <strong>WELCOME TO CUB SCOUT PACK 297!</strong>
-  </span>
+<span style="text-decoration: underline; color: #0000ff;">
+<strong>WELCOME TO CUB SCOUT PACK 297!</strong>
+</span>
 </h1>
 
 <figure>
-  <img src="https://kriegerlcsw.github.io/Pack297/images/PTAC.jpeg"
-       alt="Pathway to Adventure Council"
-       width="25%">
+<img src="https://kriegerlcsw.github.io/Pack297/images/PTAC.jpeg"
+alt="Pathway to Adventure Council"
+width="25%">
 </figure>
 
 <figure>
-  <img src="https://kriegerlcsw.github.io/Pack297/images/297.png"
-       alt="Pack 297"
-       width="25%">
+<img src="https://kriegerlcsw.github.io/Pack297/images/297.png"
+alt="Pack 297"
+width="25%">
 </figure>
 
 </center>
 
 <p style="text-align:center;">
-  <img src="https://kriegerlcsw.github.io/Pack297/images/Pack 297 FMSC 2026.png"
-       alt="Our Scouts"
-       width="80%">
+<img src="https://kriegerlcsw.github.io/Pack297/images/Pack 297 FMSC 2026.png"
+alt="Our Scouts"
+width="80%">
 </p>
 
 <p>
@@ -186,16 +179,11 @@ play games, and serve our community.
 </p>
 
 <p>
-<strong>Pack meetings are scheduled for the 3rd Friday of each month.</strong>
-Den meetings for Lions, Tigers, Wolves, Bears, and Webelos are held
-<strong>every other week on Tuesdays at 5:30 PM</strong>.
-The AOL Den's meeting day and time are currently <strong>TBA</strong>.
-</p>
-
-<p>
-Unless otherwise noted, meetings are held at
-<strong>St. Hubert Catholic Church</strong>,
-729 Grand Canyon St, Hoffman Estates, IL 60169.
+Pack meetings are scheduled for the <strong>3rd Friday each month</strong>;
+den meetings are held <strong>every other week</strong>.
+All meetings are at
+St. Hubert Church, 729 Grand Canyon St, Hoffman Estates, IL 60169,
+unless otherwise noted.
 </p>
 
 <p>
@@ -209,9 +197,9 @@ for a map!
 <h2>Why Join?</h2>
 
 <ul>
-  <li>🏕️ Camping, hiking, and racing cars!</li>
-  <li>👨‍👩‍👧‍👦 Family events all year round</li>
-  <li>⭐ Make friends and learn new skills</li>
+<li>Camping, hiking, and racing cars!</li>
+<li>Family events all year round</li>
+<li>Make friends and learn new skills</li>
 </ul>
 
 
@@ -258,101 +246,133 @@ to come! Cub Scouts is a family organization, and we love having family involved
 </ul>
 
 <p>
-Each scout is assigned to a <strong>DEN</strong> based on their grade level:
+Each scout is assigned to a DEN based on their grade level:
 </p>
 
 
 <table class="den-grade-table">
-  <colgroup>
-    <col style="width:25%">
-    <col style="width:25%">
-    <col style="width:25%">
-    <col style="width:25%">
-  </colgroup>
 
-  <tbody>
+<colgroup>
+<col style="width:25%">
+<col style="width:25%">
+<col style="width:25%">
+<col style="width:25%">
+</colgroup>
 
-    <tr>
-      <td>
-        <strong>Kindergarteners</strong>
-      </td>
+<tbody>
 
-      <td>
-        <a href="https://kriegerlcsw.github.io/Pack297/lion.html">
-          <strong>LION DEN</strong>
-        </a>
-      </td>
+<tr>
 
-      <td>
-        <strong>Third Graders</strong>
-      </td>
+<td>
+<strong>Kindergarteners</strong>
+</td>
 
-      <td>
-        <a href="https://kriegerlcsw.github.io/Pack297/bear.html">
-          <strong>BEAR DEN</strong>
-        </a>
-      </td>
-    </tr>
+<td>
+<h1>
+<strong>
+<a href="https://kriegerlcsw.github.io/Pack297/lion.html">
+LION DEN
+</a>
+</strong>
+</h1>
+</td>
 
-    <tr>
-      <td>
-        <strong>First Graders</strong>
-      </td>
+<td>
+<strong>Third Graders</strong>
+</td>
 
-      <td>
-        <a href="https://kriegerlcsw.github.io/Pack297/tiger.html">
-          <strong>TIGER DEN</strong>
-        </a>
-      </td>
+<td>
+<h1>
+<strong>
+<a href="https://kriegerlcsw.github.io/Pack297/bear.html">
+BEAR DEN
+</a>
+</strong>
+</h1>
+</td>
 
-      <td>
-        <strong>Fourth Graders</strong>
-      </td>
+</tr>
 
-      <td>
-        <a href="https://kriegerlcsw.github.io/Pack297/webelos.html">
-          <strong>WEBELOS DEN</strong>
-        </a>
-      </td>
-    </tr>
 
-    <tr>
-      <td>
-        <strong>Second Graders</strong>
-      </td>
+<tr>
 
-      <td>
-        <a href="https://kriegerlcsw.github.io/Pack297/wolf.html">
-          <strong>WOLF DEN</strong>
-        </a>
-      </td>
+<td>
+<strong>First Graders</strong>
+</td>
 
-      <td>
-        <strong>Fifth Graders</strong>
-      </td>
+<td>
+<h1>
+<strong>
+<a href="https://kriegerlcsw.github.io/Pack297/tiger.html">
+TIGER DEN
+</a>
+</strong>
+</h1>
+</td>
 
-      <td>
-        <a href="https://kriegerlcsw.github.io/Pack297/aol.html">
-          <strong>ARROW OF LIGHT (AOL) DEN</strong>
-        </a>
-      </td>
-    </tr>
+<td>
+<strong>Fourth Graders</strong>
+</td>
 
-  </tbody>
+<td>
+<h1>
+<strong>
+<a href="https://kriegerlcsw.github.io/Pack297/webelos.html">
+WEBELOS DEN
+</a>
+</strong>
+</h1>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Second Graders</strong>
+</td>
+
+<td>
+<h1>
+<strong>
+<a href="https://kriegerlcsw.github.io/Pack297/wolf.html">
+WOLF DEN
+</a>
+</strong>
+</h1>
+</td>
+
+<td>
+<strong>Fifth Graders</strong>
+</td>
+
+<td>
+<h1>
+<strong>
+<a href="https://kriegerlcsw.github.io/Pack297/aol.html">
+ARROW OF LIGHT (AOL) DEN
+</a>
+</strong>
+</h1>
+</td>
+
+</tr>
+
+</tbody>
 </table>
 
 
 <p>
-<strong>Den Meetings:</strong> Lions, Tigers, Wolves, Bears, and Webelos
-meet <strong>every other week on Tuesdays at 5:30 PM</strong>.
-The AOL Den begins the week of September 7, 2026; its meeting day and
-time are <strong>TBA</strong>.
-</p>
-
-<p>
-All of the dens together are called a <strong>PACK</strong>.
+DENS usually meet <strong>every other week</strong>.
+Lions, Tigers, Wolves, Bears, and Webelos meet on
+<strong>Tuesdays at 5:30 PM</strong>.
+The AOL Den begins the week of September 7, 2026;
+its meeting day and time are currently TBA.
+All of the dens together are called a PACK.
 The Pack meets monthly, plus special events.
 </p>
+
 
 <p>
 Click on one of the above dens, or on one of the following pictures,
@@ -360,57 +380,59 @@ to go to their web page!
 </p>
 
 
-<div class="den-grid">
+<figure>
+<a href="https://kriegerlcsw.github.io/Pack297/lion.html">
+<img src="https://kriegerlcsw.github.io/Pack297/lion%20logo.png"
+alt="Lion Logo"
+width="17%">
+<strong>LION DEN</strong>
+</a>
+</figure>
 
-  <div class="den-card">
-    <a href="https://kriegerlcsw.github.io/Pack297/lion.html">
-      <img src="https://kriegerlcsw.github.io/Pack297/lion%20logo.png"
-           alt="Lion Logo">
-      <strong>🦁 LION DEN</strong>
-    </a>
-  </div>
+<figure>
+<a href="https://kriegerlcsw.github.io/Pack297/tiger.html">
+<img src="https://kriegerlcsw.github.io/Pack297/tiger%20logo.webp"
+alt="Tiger Logo"
+width="15%">
+<strong>TIGER DEN</strong>
+</a>
+</figure>
 
-  <div class="den-card">
-    <a href="https://kriegerlcsw.github.io/Pack297/tiger.html">
-      <img src="https://kriegerlcsw.github.io/Pack297/tiger%20logo.webp"
-           alt="Tiger Logo">
-      <strong>🐯 TIGER DEN</strong>
-    </a>
-  </div>
+<figure>
+<a href="https://kriegerlcsw.github.io/Pack297/wolf.html">
+<img src="https://kriegerlcsw.github.io/Pack297/wolf%20logo.webp"
+alt="Wolf Logo"
+width="15%">
+<strong>WOLF DEN</strong>
+</a>
+</figure>
 
-  <div class="den-card">
-    <a href="https://kriegerlcsw.github.io/Pack297/wolf.html">
-      <img src="https://kriegerlcsw.github.io/Pack297/wolf%20logo.webp"
-           alt="Wolf Logo">
-      <strong>🐺 WOLF DEN</strong>
-    </a>
-  </div>
+<figure>
+<a href="https://kriegerlcsw.github.io/Pack297/bear.html">
+<img src="https://kriegerlcsw.github.io/Pack297/bear%20logo.webp"
+alt="Bear Logo"
+width="15%">
+<strong>BEAR DEN</strong>
+</a>
+</figure>
 
-  <div class="den-card">
-    <a href="https://kriegerlcsw.github.io/Pack297/bear.html">
-      <img src="https://kriegerlcsw.github.io/Pack297/bear%20logo.webp"
-           alt="Bear Logo">
-      <strong>🐻 BEAR DEN</strong>
-    </a>
-  </div>
+<figure>
+<a href="https://kriegerlcsw.github.io/Pack297/webelos.html">
+<img src="https://kriegerlcsw.github.io/Pack297/webelos%20logo.png"
+alt="Webelos Logo"
+width="13%">
+<strong>WEBELOS DEN</strong>
+</a>
+</figure>
 
-  <div class="den-card">
-    <a href="https://kriegerlcsw.github.io/Pack297/webelos.html">
-      <img src="https://kriegerlcsw.github.io/Pack297/webelos%20logo.png"
-           alt="Webelos Logo">
-      <strong>🟢 WEBELOS DEN</strong>
-    </a>
-  </div>
-
-  <div class="den-card">
-    <a href="https://kriegerlcsw.github.io/Pack297/aol.html">
-      <img src="https://kriegerlcsw.github.io/Pack297/aol%20logo.png"
-           alt="AOL Logo">
-      <strong>⭐ ARROW OF LIGHT (AOL) DEN</strong>
-    </a>
-  </div>
-
-</div>
+<figure>
+<a href="https://kriegerlcsw.github.io/Pack297/aol.html">
+<img src="https://kriegerlcsw.github.io/Pack297/aol%20logo.png"
+alt="AOL Logo"
+width="15%">
+<strong>ARROW OF LIGHT (AOL) DEN</strong>
+</a>
+</figure>
 
 
 <ul>
@@ -438,17 +460,15 @@ Cub Scout groups (called Packs) in Schaumburg Township.
 <li>
 Are there events all year round, or just during the school year?
 <br>
-We meet regularly throughout the year. Our regular Pack meetings are
-scheduled for the <strong>3rd Friday of each month</strong>, and our
-regular den meetings for Lions through Webelos are scheduled
-<strong>every other week on Tuesdays at 5:30 PM</strong>.
-
-We also have special events throughout the year, including summer
-activities. Check our
-<a href="https://kriegerlcsw.github.io/Pack297/Events.html">
-<strong>Events</strong>
-</a>
-page for the current calendar.
+We meet regularly throughout the year. Over the summer, we do not have
+regular den or pack meetings, but we do have special events during the
+summer, such as swim events at Seascape Family Aquatic Center,
+marching in the Hoffman Estates Fourth of July Parade, and camping out
+overnight after the Schaumburg Boomers game on the field!
+<br>
+Once school starts for the new school year, we return to regular den
+and pack meetings. Most dens meet every other week, and the Pack meets
+as a whole every month.
 </li>
 </ul>
 
@@ -483,7 +503,7 @@ Treasurer, New Member Coordinator, and Advancement Coordinator.
 
 
 <br>
-<strong>What should I do next?</strong>
+What should I do next?
 
 <br><br>
 
@@ -511,26 +531,32 @@ in general, click
 <a href="mailto:pack297hoffmanestates@gmail.com">
 <strong>HERE</strong>
 </a>
-to email Pack 297.
+to email George Krieger.
 
 <br><br>
 
+
 <figure>
-  <a href="https://my.scouting.org/online-registration/60d27983-617d-4ae7-886f-9c1ac6071cfa/applicant-type">
-    <img src="https://kriegerlcsw.github.io/Pack297/images/297.png"
-         alt="297 Logo"
-         width="15%">
-    <h1>Join Pack 297 Now!</h1>
-  </a>
+<a href="https://my.scouting.org/online-registration/60d27983-617d-4ae7-886f-9c1ac6071cfa/applicant-type">
+
+<img src="https://kriegerlcsw.github.io/Pack297/images/297.png"
+alt="297 Logo"
+width="15%">
+
+<h1>Join Pack 297 Now!</h1>
+
+</a>
 </figure>
 
 
 <br><br>
 
-<strong>Call, text, or email!</strong>
+Call, text, or email!
+
 <br>
 
-George Krieger | 📞 (847) 989-5056 |
+George Krieger |
+📞 (847) 989-5056 |
 ✉️
 <a href="mailto:pack297hoffmanestates@gmail.com">
 pack297hoffmanestates@gmail.com
@@ -541,11 +567,14 @@ pack297hoffmanestates@gmail.com
 Total visits: <span id="visit-count"></span>
 </p>
 
+
 <a href="https://www.hitwebcounter.com" target="_blank">
+
 <img src="https://hitwebcounter.com/counter/counter.php?page=20997991&style=0006&nbdigits=5&type=page&initCount=0"
 title="Counter Widget"
 alt="Visit counter For Websites"
 border="0">
+
 </a>
 
 </body>
